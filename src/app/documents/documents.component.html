@@ -5,10 +5,16 @@
       class="card-img-top"
       src="{{ doc.image_url }}"
       alt="Card image cap"
-      width="100%"
+      width="250px"
+      height="250px"
     />
     <div class="card-body">
       <h4 class="card-title">{{ doc.title }}</h4>
+      <p class="card-text">
+        <small class="text-muted"
+          >Last updated: {{ doc.updated_at | date }}</small
+        >
+      </p>
 
       <p class="card-text">{{ doc.description }}</p>
       <div>
@@ -16,10 +22,6 @@
           >Download File</a
         >
       </div>
-
-      <p class="card-text">
-        <small class="text-muted">{{ doc.updated_at }}</small>
-      </p>
     </div>
   </div>
 </div>
