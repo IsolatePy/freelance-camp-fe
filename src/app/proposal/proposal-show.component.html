@@ -1,7 +1,7 @@
 <div class="container">
   <div *ngIf="proposal" class="card proposal-card">
     <h1>{{ proposal.customer }}</h1>
-    <div class="col-md-6">
+    <div>
       <div>
         <p>Hi {{ proposal.customer }},</p>
 
@@ -36,7 +36,7 @@
           the estimated total will be
           {{
             proposal.hourly_rate * proposal.estimated_hours
-              | currency: "USD":true:".0"
+              | currency: "USD":'symbol':'.0'
           }}.
         </p>
 
